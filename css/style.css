@@ -57,4 +57,10 @@ footer a.fa {
   .header hr {
     opacity: 0;
   }
+  .github-box .github-box-download {
+    min-height: 10px !important;
+  }
+  .github-box .github-box-download .download {
+    display: none;
+  }
 }
