@@ -11,56 +11,62 @@ html(lang="en")
     link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='css/style.min.css')
   body
-    .container
-      .navbar.navbar-default(role='navigation')
-        .navbar-header
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href='#')
-            img(src='img/logo.png', alt='Jiabin logo', title='Jiabin logo')
-        .collapse.navbar-collapse
-          ul.nav.navbar-nav.navbar-right
-            li
-              a(href='//github.com/jiabin') github.com/jiabin
-      .content
+    .header
+      .container
+        .navbar.navbar-default(role='navigation')
+          .navbar-header
+            a.navbar-brand(href='#')
+              img(src='img/logo.png', alt='Jiabin logo', title='Jiabin Open Source')
+          .collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+              li
+                a(href='//github.com/jiabin') github.com/jiabin
         .row
           .col-xs-12
             hr
             p.lead.text-center As a company built on open source, here are some of the internally-developed projects we have contributed back to the community.
             hr
-            .github-widget(data-repo='jiabin/migraine')
-            .github-widget(data-repo='jiabin/haraka-rcptlog')
-            .github-widget(data-repo='jiabin/facetly')
-            .github-widget(data-repo='jiabin/holter')
-            .github-widget(data-repo='jiabin/HolterBundle')
-            .github-widget(data-repo='jiabin/JuliusFrameworkExtraBundle')
-            .github-widget(data-repo='jiabin/JuliusRefererBundle')
-            .github-widget(data-repo='jiabin/utility-belt')
-        .row
-          .col-xs-12
-            hr
-            p.lead.text-center Here are some of the great open source projects that Jiabin is using to power its infrastructure.
-            hr
-            .github-widget(data-repo='mongodb/mongo')
-            .github-widget(data-repo='elasticsearch/elasticsearch')
-            .github-widget(data-repo='antirez/redis')
-            .github-widget(data-repo='Supervisor/supervisor')
-            .github-widget(data-repo='php/php-src')
-            .github-widget(data-repo='bower/bower')
-            .github-widget(data-repo='capistrano/capistrano')
-            .github-widget(data-repo='eymengunay/subway')
-        .row
-          .col-xs-12
-            hr
-            footer
-              a.fa.fa-facebook(href="//facebook.com/JiabinMilano")
-              a.fa.fa-twitter(href="//twitter.com/JiabinMI")
-              a.fa.fa-github(href="//github.com/jiabin")
+    .container
+      .row
+        .col-lg-7
+          .page-header
+            h3
+              span.fa.fa-gears &nbsp;
+              | Internally-developed projects
+          .github-widget(data-repo='jiabin/migraine')
+          .github-widget(data-repo='jiabin/haraka-rcptlog')
+          .github-widget(data-repo='jiabin/facetly')
+          .github-widget(data-repo='jiabin/holter')
+          .github-widget(data-repo='jiabin/HolterBundle')
+          .github-widget(data-repo='jiabin/JuliusFrameworkExtraBundle')
+          .github-widget(data-repo='jiabin/JuliusRefererBundle')
+          .github-widget(data-repo='jiabin/utility-belt')
+        .col-lg-5
+          .page-header
+            h3
+              span.fa.fa-bars &nbsp;
+              | Projects that power Jiabin
+          .github-widget(data-repo='mongodb/mongo')
+          .github-widget(data-repo='elasticsearch/elasticsearch')
+          .github-widget(data-repo='Supervisor/supervisor')
+          .github-widget(data-repo='php/php-src')
+          .github-widget(data-repo='bower/bower')
+          .github-widget(data-repo='capistrano/capistrano')
+          .github-widget(data-repo='eymengunay/subway')
+          .github-widget(data-repo='antirez/redis')
+      .row
+        .col-xs-12
+          hr
+          footer
+            a.fa.fa-facebook(href='//facebook.com/JiabinMilano', data-toggle='tooltip', data-placement='top', title='Jiabin on Facebook')
+            a.fa.fa-twitter(href='//twitter.com/JiabinMI', data-toggle='tooltip', data-placement='top' title='Jiabin on Twitter')
+            a.fa.fa-github(href='//github.com/jiabin', data-toggle='tooltip', data-placement='top' title='Jiabin on GitHub')
 
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js')
     script(src='js/jquery-ajax-localstorage-cache.min.js')
     script(src='js/github-repo-widget.min.js')
+    script.
+      $(function(){
+         $('[data-toggle="tooltip"]').tooltip();
+      });
