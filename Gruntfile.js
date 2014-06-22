@@ -1,8 +1,7 @@
 /*
- * admin-template
- * https://github.com/jiabin/admin-template
+ * jiabin.github.io
  *
- * Copyright (c) 2014 Eymen Gunay
+ * Copyright (c) Jiabin
  * Licensed under the Custom license.
  */
 
