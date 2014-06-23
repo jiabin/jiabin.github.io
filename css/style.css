@@ -7,7 +7,9 @@ body {
 }
 .header {
   background: url('../img/background.jpg');
-  background-size: cover;
+  background-size: 125%;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 .header .lead {
   text-shadow: 1px 1px rgba(255, 255, 255, 0.4);

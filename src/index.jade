@@ -69,5 +69,12 @@ html(lang='en')
     script(src='js/github-repo-widget.min.js')
     script.
       $(function(){
-         $('[data-toggle="tooltip"]').tooltip();
+        // Tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // Header parallax
+        $('.header').mousemove(function(e) {
+          var x = ((e.pageX - $(this).width()) / 20);
+          $(this).css('background-position', x + 'px 0%');
+        });
       });
