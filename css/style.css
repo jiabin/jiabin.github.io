@@ -10,6 +10,7 @@ body {
   background-size: 125%;
   background-repeat: no-repeat;
   overflow: hidden;
+  border-bottom: 1px solid #ddd;
 }
 .header .lead {
   text-shadow: 1px 1px rgba(255, 255, 255, 0.4);
@@ -55,6 +56,7 @@ footer a.fa {
   }
   .header {
     margin-top: 50px;
+    padding: 20px 0;
   }
   .header hr {
     opacity: 0;
@@ -63,6 +65,9 @@ footer a.fa {
     min-height: 10px !important;
   }
   .github-box .github-box-download .download {
+    display: none;
+  }
+  .fork {
     display: none;
   }
 }
